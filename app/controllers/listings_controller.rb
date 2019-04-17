@@ -5,6 +5,10 @@ class ListingsController < ApplicationController
 
     def create
         #create new listing
+        #a=1
+        #byebug
+        #a += 2
+        #byebug
     end
 
     def update

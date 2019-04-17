@@ -5,3 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+Snake.names.each { |name|
+    Breed.create(name: name.downcase.strip)
+    puts "#{name} created"
+}

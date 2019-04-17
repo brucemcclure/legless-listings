@@ -1,4 +1,5 @@
-class PagesController < ApplicationController
+class ListingsController < ApplicationController
+    
     before_action :set_listing, only: [:show, :edit, :update, :destroy]
 
 
@@ -23,6 +24,7 @@ class PagesController < ApplicationController
 
     def new
         #shows form for creating a new listing
+    @listing = Listing.new
     end
 
     def show

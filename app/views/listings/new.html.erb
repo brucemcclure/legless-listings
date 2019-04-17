@@ -44,14 +44,13 @@
     </div>
 
     <div>
-        <% @sexes.each do |sex| %> 
+        <% @sexes.each do |option| %> 
             <div>
                 <%= form.radio_button :sex, option %>
                 <%= form.label "sex_#{option}".to_sym%>
+            <% end %>
             </div>
-        <% end %>
     </div>
-
 
 
     <div>

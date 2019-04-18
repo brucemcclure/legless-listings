@@ -1,5 +1,11 @@
 <h1>New Listing</h1>
 
+
+<%= if @Listing.errors.any? %>
+   <% @Listing.errors.full_messages.each do |error| %>
+   <p> <%= error %> </p>
+<%= end %>
+
 <%= form_with model: @listing, local: true do |form| %>
 
     <div>

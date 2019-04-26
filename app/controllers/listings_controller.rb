@@ -41,8 +41,25 @@ class ListingsController < ApplicationController
         @listing = Listing.new
     end
 
-    def show
-        #view a single listing
+    def show        
+    stripe_session = Stripe::Checkout::Session.create(
+    payment_method_types: ['card'],
+    line_items: [{
+    name: @listing.title,
+    description: @listing.description,
+    amount: @listing.deposit,
+    currency: 'aud',
+    quantity: 1,
+  }],
+
+
+
+  #Must be dynamic... This shit is not
+  success_url: 'https://http://localhost:3000/success',
+  cancel_url: 'https://http://localhost:3000/cancel',
+)
+
+  @stripe_session_id = stripe_session.id  
     end
 
     private

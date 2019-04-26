@@ -55,8 +55,8 @@ class ListingsController < ApplicationController
 
 
   #Must be dynamic... This shit is not
-  success_url: 'https://http://localhost:3000/success',
-  cancel_url: 'https://http://localhost:3000/cancel',
+  success_url: 'http://localhost:3000/payments/success',
+  cancel_url: 'http://localhost:3000/cancel',
 )
 
   @stripe_session_id = stripe_session.id  

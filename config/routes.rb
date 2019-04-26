@@ -4,4 +4,5 @@ Rails.application.routes.draw do
   resources :listings
 
   post "/payments/stripe", to: "payments#stripe"
+  get "/payments/success", to: "payments#success"
 end
